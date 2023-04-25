@@ -72,17 +72,17 @@ class FloatingActionBubble extends AnimatedWidget {
   get _animation => listenable;
 
   Widget buildItem(BuildContext context, int index) {
-    final screenWidth = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     TextDirection textDirection = Directionality.of(context);
 
     double animationDirection = textDirection == TextDirection.ltr ? -1 : 1;
 
     final transform = Matrix4.translationValues(
-      0.0,
-      1 *
+      animationDirection *
           (screenWidth - _animation.value * screenWidth) *
           ((items.length - index) / 4),
+      0.0,
       0.0,
     );
 
