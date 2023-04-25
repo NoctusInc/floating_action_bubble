@@ -80,7 +80,7 @@ class FloatingActionBubble extends AnimatedWidget {
 
     final transform = Matrix4.translationValues(
       0.0,
-      animationDirection *
+      1 *
           (screenWidth - _animation.value * screenWidth) *
           ((items.length - index) / 4),
       0.0,
