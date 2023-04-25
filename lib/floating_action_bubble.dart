@@ -111,7 +111,7 @@ class FloatingActionBubble extends AnimatedWidget {
           child: ListView.separated(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            separatorBuilder: (_, __) => const SizedBox(height: 6),
+            separatorBuilder: (_, __) => const SizedBox(height: 1),
             padding: const EdgeInsets.symmetric(vertical: 12),
             itemCount: items.length,
             itemBuilder: buildItem,
